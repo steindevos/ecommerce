@@ -1,3 +1,45 @@
+/*-------------------------------------------------------------------------background colors, font-colors*/
+.navbar-bg-color {
+    background-color: #324851;
+    background-image: none;
+    border: none;
+}
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    background-color: #7DA3A1;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: #ffffff;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #324851;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-logo {
+    max-height: 30px;
+    margin-top: -5px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #324851;
+}
+
+.btn-primary-bg-color {
+    background-image: none;
+    background-color: #86AC41;
+    text-transform: uppercase; 
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------special margins, paddings*/
 .block-wrapper {
     margin-top: 50px;
 }
