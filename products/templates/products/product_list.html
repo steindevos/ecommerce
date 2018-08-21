@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% load bootstrap_tags %}{% block content %} {% for product in products %}
+
+
+
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img class="text-center" src="{{MEDIA_URL}}{{product.image}}" alt="cheese">
+            <div class="caption">
+                <h3>{{product.name}}</h3>
+                <p>{{product.description | linebreaksbr}}</p>
+                <p><a href="{% url 'show_details' product.id %}" class="btn btn-primary" role="button">More information</a> <a href="#" class="btn btn-default" role="button">Buy</a></p>
+            </div>
+        </div>
+    </div>
+
+
+{% endfor %} {% endblock %}
