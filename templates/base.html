@@ -1,6 +1,7 @@
 {% load static from staticfiles %}
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>De Producent</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -13,19 +14,26 @@
     <nav class="navbar navbar-bg-color navbar-masthead navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="glyphicon glyphicon-menu-hamburger"></span>
                 </button>
                 <a class="navbar-brand" href="{% url 'show_products' %}"><img class="navbar-logo" src="{% static 'images/logo.png' %}"></a>
-                </div>
+            </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{% url 'show_products' %}"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
-                    <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                    <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    <li><a href="{% url 'register' %}"><i class="fas fa-info-circle"></i> About us</a></li>
+                    <li><a href="{% url 'login' %}"><i class="far fa-newspaper"></i> News</a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fas fa-warehouse"></i> Contact</a></li>
                     <li><a href="{% url 'show_my_cart' %}"><i class="fas fa-shopping-cart"></i> Cart <label class="badge badge-light">{{number_of_items_in_cart}}</label></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'register' %}"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><a href="{% url 'login' %}"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                            <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -38,8 +46,7 @@
                 <div class="panel">
                     <div class="panel-body">
                         <!--blogpost entries-->
-                        {% block content %}
-                        {% endblock %}
+                        {% block content %} {% endblock %}
                         <!--blogpost entries-->
                     </div>
                 </div>
@@ -47,8 +54,9 @@
         </div>
     </div>
 
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
+
 </html>

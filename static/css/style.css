@@ -41,5 +41,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 /*-------------------------------------------------------------------------special margins, paddings*/
 .block-wrapper {
-    margin-top: 50px;
+    padding-top: 70px;
+}
+.nav>li>a {
+    max-height: 50px;
+}
+.navbar-logo {
+    max-height: 30px;
+    margin-top: -5px;
 }
